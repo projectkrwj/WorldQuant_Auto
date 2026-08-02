@@ -1,0 +1,2 @@
+passed,delay,region,neutralization,decay,truncation,sharpe,fitness,turnover,weight,subsharpe,correlation,universe,link,code
+False,1,USA,SUBINDUSTRY,6,0.1,0.1,0.03,1.45,PASS,-0.11,-1,TOP3000,https://platform.worldquantbrain.com/alpha/A1Pz3ljQ,"rank(ts_mean(close,5))"
