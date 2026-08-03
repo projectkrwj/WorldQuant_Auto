@@ -119,9 +119,12 @@ def main():
     # Simulation
     # ==========================
 
-    result = simulator.simulate(
-        alpha
-    )
+    simulation_data = [{
+        "code": alpha["expression"],
+        **alpha
+    }]
+
+    result = simulator.simulate(simulation_data)
 
 
     logging.info(
@@ -135,64 +138,8 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-
-'''
-import csv
-import logging
-import requests
-import json
-import time
-import os
-import pandas as pd
-import argparse
-from datetime import datetime
-from parameters import SIMULATION_CRITERIA, DEFAULT_SETTINGS
-from concurrent.futures import ThreadPoolExecutor
-from threading import current_thread
-import webbrowser
-
-from session.session import WQSession
-from simulator.simulator import Simulator
-from database.data import update_all_fields, update_datasets
-
-
-# 로그 및 데이터 디렉토리 생성
-os.makedirs('data', exist_ok=True)
-os.makedirs('logs', exist_ok=True)
-#기존 로깅 제거
-for handler in logging.root.handlers:
-    logging.root.removeHandler(handler)
-#로그 초기화
-logging.basicConfig(encoding='utf-8', level=logging.INFO, format='%(asctime)s: %(message)s')
-
-alpha = "rank(ts_mean(close,5))"
-simulation_data = []
-simulation_data.append({
-                    'code': alpha,
-                    **DEFAULT_SETTINGS
-                })
-session = WQSession()
-simulator = Simulator(session)
-'''
-
-
 '''
 dataset업데이트원할시 실행
 update_datasets(session)
 update_all_fields(session)
-'''
-
-''' generator생성 후 main사용법
-from generator import Generator
-from generator.selector import RandomSelector
-from generator.renderer import render
-
-selector = RandomSelector()
-
-generator = Generator(selector)
-
-ast = generator.generate()
-
-print(render(ast))
 '''

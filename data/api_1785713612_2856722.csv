@@ -1,0 +1,2 @@
+passed,delay,region,neutralization,decay,truncation,sharpe,fitness,turnover,weight,subsharpe,correlation,universe,link,code
+False,1,USA,SUBINDUSTRY,6,0.1,-0.05,-0.0,46.7,FAIL,0.09,-1,TOP3000,https://platform.worldquantbrain.com/alpha/xANOx7Zb,"ts_regression(ts_step(sqrt(goodwill_fx_translation_adjustments)),implied_volatility_mean_skew_360,5)"
